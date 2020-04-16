@@ -21,11 +21,11 @@ TEST_CASE("Test case 1") {
 	T.addFather("Isaac", "Avraham");
 	T.addFather("Avraham", "Terah");
 
-    CHECK(T.relation("Rivka") == string("mother"));
+    CHECK(T.relation("Rivka") == string("grandmother"));
     CHECK(T.relation("Terah") == string("great-great-grandfather"));
     CHECK(T.relation("xyz") == string("unrelated"));
 
-    CHECK(T.find("mother") == string("Rivka"));
+    CHECK(T.find("grandmother") == string("Rivka"));
     CHECK(T.find("great-great-grandfather") == string("Terah"));
 
     /* Add more tests here */
